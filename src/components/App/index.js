@@ -1,21 +1,19 @@
 // == Import
-import Button from "../Button";
 import NbColors from "../NbColors";
 import Gradient from "../Gradient";
 import Colors from "../Colors";
+import DirectionButtons from "../Buttons/DirectionButtons";
+import RandomButtons from "../Buttons/RandomButtons";
 
 // == Composant
 function App() {
   return(
   <div className="app">
     <NbColors />
-    <Button>Random First</Button>
-    <Button>Random All</Button>
-    <Button>Random Last</Button>
+    <RandomButtons />
     <Colors />
     <Gradient />
-    <Button>To Left</Button>
-    <Button>To Right</Button>
+    <DirectionButtons />
   </div>
   )
 }

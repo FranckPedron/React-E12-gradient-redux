@@ -3,7 +3,7 @@ import Color from '../Color'
 function Colors() {
   return (
     <div id="colors">
-      <Color /> - <Color />
+      <Color color="blue" /> - <Color color="red" />
     </div>
   );
 }

@@ -1,7 +1,12 @@
-function Color () {
+import PropTypes from "prop-types";
+
+function Color ({color}) {
   return (
-    <span style={{color:'#ff9900'}}>#ff9900</span>
+    <span style={{color: color}}>{color}</span>
   );
 }
 
+Color.propTypes = {
+  color: PropTypes.string.isRequired,
+}
 export default Color;
