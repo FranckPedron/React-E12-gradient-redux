@@ -1,14 +1,24 @@
 // == Import
-import reactLogo from './react-logo.svg';
-import './styles.css';
+import Button from "../Button";
+import NbColors from "../NbColors";
+import Gradient from "../Gradient";
+import Colors from "../Colors";
 
 // == Composant
-const App = () => (
+function App() {
+  return(
   <div className="app">
-    <img src={reactLogo} alt="react logo" />
-    <h1>Composant : App</h1>
+    <NbColors />
+    <Button>Random First</Button>
+    <Button>Random All</Button>
+    <Button>Random Last</Button>
+    <Colors />
+    <Gradient />
+    <Button>To Left</Button>
+    <Button>To Right</Button>
   </div>
-);
+  )
+}
 
 // == Export
 export default App;

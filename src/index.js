@@ -1,3 +1,13 @@
+import { render} from "react-dom";
+import App from "./components/App";
+
+const rootDOMElement = document.getElementById('root');
+const rootReactElement = <App />;
+
+render(rootReactElement, rootDOMElement);
+
+
+/*
 // == Imports
 import store from 'src/store';
 import {changeDirection, changeFirstColor} from './actions';
@@ -107,3 +117,4 @@ document.getElementById('to315')
   .addEventListener('click', () => {
     store.dispatch(changeDirection('315deg'));
   });
+*/
