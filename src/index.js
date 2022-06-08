@@ -1,6 +1,6 @@
 // == Imports
 import store from 'src/store';
-import { changeFirstColor } from './actions';
+import {changeDirection, changeFirstColor} from './actions';
 import { randomHexColor, generateSpanColor } from './utils';
 
 // == Rendu dans le DOM
@@ -74,12 +74,12 @@ document.getElementById('randLast')
 
 document.getElementById('toLeft')
   .addEventListener('click', () => {
-    store.dispatch({ type: 'CHANGE_DIRECTION_TO_LEFT' });
+    store.dispatch(changeDirection('270deg'));
   });
 
 document.getElementById('toRight')
   .addEventListener('click', () => {
-    store.dispatch({ type: 'CHANGE_DIRECTION_TO_RIGHT' });
+    store.dispatch(changeDirection('90deg'));
   });
 
 const pinkElement = document.getElementById('pink');
@@ -90,5 +90,20 @@ pinkElement.addEventListener('click', () => {
 
 document.getElementById('to45')
 .addEventListener('click', () => {
-  store.dispatch({ type: 'CHANGE_DIRECTION_TO_45'});
+  store.dispatch(changeDirection('45deg'));
 });
+
+document.getElementById('to135')
+  .addEventListener('click', () => {
+    store.dispatch(changeDirection('135deg'));
+  });
+
+document.getElementById('to225')
+  .addEventListener('click', () => {
+    store.dispatch(changeDirection('225deg'));
+  });
+
+document.getElementById('to315')
+  .addEventListener('click', () => {
+    store.dispatch(changeDirection('315deg'));
+  });

@@ -1,4 +1,4 @@
-import { CHANGE_FIRST_COLOR } from '../actions';
+import {CHANGE_DIRECTION, CHANGE_FIRST_COLOR} from '../actions';
 
 const initialState = {
   firstColor: '#123456',
@@ -31,11 +31,12 @@ function reducer(state = initialState, action = {}) {
         nbColors: state.nbColors + 1,
         firstColor: action.color,
       };
-    case 'CHANGE_DIRECTION_TO_45':
+    case CHANGE_DIRECTION:
       return {
         ...state,
-        direction: '45deg',
+        direction: action.direction,
       };
+
     default:
       return state;
   }
