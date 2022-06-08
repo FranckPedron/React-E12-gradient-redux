@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Color ({color}) {
+function Color ({ color }) {
   return (
     <span style={{color: color}}>{color}</span>
   );

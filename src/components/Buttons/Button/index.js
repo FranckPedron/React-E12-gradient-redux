@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types';
 
-function Button({ children }) {
+function Button({ children, action }) {
   return (
-    <button className="button" type="button">{children}</button>
+    <button
+      className="button"
+      type="button"
+      onClick={action}
+    >
+      {children}
+    </button>
   )
 }
 
