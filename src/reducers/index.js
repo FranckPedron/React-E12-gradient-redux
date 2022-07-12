@@ -1,15 +1,16 @@
-import {CHANGE_DIRECTION, CHANGE_FIRST_COLOR} from '../actions';
+import { CHANGE_DIRECTION, CHANGE_FIRST_COLOR, TOGGLE_RADIAL_MODE } from '../actions';
 
 const initialState = {
   firstColor: '#123456',
   lastColor: '#654321',
   direction: '90deg',
   nbColors: 0,
+  type: 'linear'
 };
 
 function reducer(state = initialState, action = {}) {
   switch (action.type) {
-    case 'CHANGE_DIRECTION_TO_RIGHT':
+   /* case 'CHANGE_DIRECTION_TO_RIGHT':
       return {
         ...state,
         direction: '90deg',
@@ -18,7 +19,7 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         direction: '270deg',
-      };
+      };*/
     case 'CHANGE_LAST_COLOR':
       return {
         ...state,
@@ -35,6 +36,11 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         direction: action.direction,
+      };
+    case TOGGLE_RADIAL_MODE:
+      return {
+        ...state,
+        type: state.type === 'linear' ? 'radial' : 'linear',
       };
 
     default:

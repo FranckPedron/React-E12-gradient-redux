@@ -20,10 +20,10 @@ function DirectionButtons() {
     <ButtonsGroup>
       <Button action={changeDirection('270deg')}>To Left</Button>
       <Button action={changeDirection('90deg')}>To Right</Button>
-      <Button action={changeDirection('45deg')}>To 45</Button>
-      <Button action={changeDirection('135deg')}>To 135</Button>
-      <Button action={changeDirection('225deg')}>To 225</Button>
-      <Button action={changeDirection('315deg')}>To 315</Button>
+      <Button action={changeDirection('45deg')}>To 45°</Button>
+      <Button action={changeDirection('135deg')}>To 135°</Button>
+      <Button action={changeDirection('225deg')}>To 225°</Button>
+      <Button action={changeDirection('315deg')}>To 315°</Button>
       <OtherDirectionChoice />
     </ButtonsGroup>
   );

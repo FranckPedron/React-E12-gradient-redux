@@ -9,11 +9,11 @@ function Button({ children, action }) {
     >
       {children}
     </button>
-  )
+  );
 }
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Button ;
+export default Button;

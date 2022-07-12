@@ -6,6 +6,7 @@ import { changeDirection } from '../../../actions';
 function OtherDirectionChoice() {
   const direction = useSelector(state => state.direction).replace('deg', '');
   const dispatch = useDispatch();
+
   const handleChange = (e) => {
     dispatch(changeDirection(`${e.target.value}deg`));
   }
