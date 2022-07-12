@@ -18,8 +18,8 @@ function App() {
       <RandomButtons/>
       <Colors/>
       <Gradient/>
-      {type === 'linear' && <DirectionButtons/>}
       <SwitchType/>
+      {type === 'linear' && <DirectionButtons/>}
     </div>
   );
 }
